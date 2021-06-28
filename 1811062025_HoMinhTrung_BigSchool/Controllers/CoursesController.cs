@@ -1,5 +1,6 @@
 ﻿using _1811062025_HoMinhTrung_BigSchool.Models;
 using _1811062025_HoMinhTrung_BigSchool.ViewModels;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,28 @@ namespace _1811062025_HoMinhTrung_BigSchool.Controllers
                 categories = _dbContext.Categories.ToList()
             };
             return View(viewModel);
+        }
+        // POST: Courses
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(CourseViewModel viewModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                viewModel.categories = _dbContext.Categories.ToList();
+                return View("Create", viewModel);
+            }
+            var course = new Course
+            {
+                LectureID = User.Identity.GetUserId(),
+                DateTime = viewModel.GetDateTime(),
+                CategoryID = viewModel.Category,
+                Place = viewModel.Place
+            };
+        _dbContext.Courses.Add(course);
+        _dbContext.SaveChanges();
+        return RedirectToAction("Index", "Home");
         }
     }
 }
