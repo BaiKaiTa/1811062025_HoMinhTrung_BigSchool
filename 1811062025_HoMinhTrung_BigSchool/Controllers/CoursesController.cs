@@ -17,6 +17,7 @@ namespace _1811062025_HoMinhTrung_BigSchool.Controllers
             _dbContext = new ApplicationDbContext();
         }
         // GET: Courses
+        //đang làm bài thì thầy bắt bảo dùng github
         [Authorize]
         public ActionResult Create()
         {
