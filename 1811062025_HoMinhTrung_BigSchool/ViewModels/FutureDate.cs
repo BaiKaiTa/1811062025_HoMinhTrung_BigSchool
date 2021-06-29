@@ -12,9 +12,9 @@ namespace _1811062025_HoMinhTrung_BigSchool.ViewModels
         public override bool IsValid(object value)
         {
             DateTime dateTime;
-            var isValid = DateTime.TryParseExact(Convert.ToString(value), "dd/M/yyy",
+            var isValid = DateTime.TryParseExact(Convert.ToString(value), "dd/M/yyyy",
                 CultureInfo.CurrentCulture,
-                System.Globalization.DateTimeStyles.None,
+                DateTimeStyles.None,
                 out dateTime);
             return (isValid && dateTime > DateTime.Now);
         }

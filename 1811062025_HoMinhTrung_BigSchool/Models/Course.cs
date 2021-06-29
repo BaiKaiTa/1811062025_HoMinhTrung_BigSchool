@@ -9,6 +9,7 @@ namespace _1811062025_HoMinhTrung_BigSchool.Models
     public class Course
     { 
         public int Id { get; set; }
+        public bool Iscanceled { get; set; }
         public ApplicationUser Lecturer { get; set; }
         [Required]
         public string LectureID { get; set; }

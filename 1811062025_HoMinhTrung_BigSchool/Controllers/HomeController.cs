@@ -22,7 +22,6 @@ namespace _1811062025_HoMinhTrung_BigSchool.Controllers
                 .Include(c => c.Lecturer)
                 .Include(c => c.Category)
                 .Where(c => c.DateTime > DateTime.Now);
-
             var viewModel = new CoursesViewModel
             {
                 UpcommingCourses = upcommingCourses,
