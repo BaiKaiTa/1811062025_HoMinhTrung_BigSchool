@@ -27,23 +27,21 @@
                 </div>
             </div>
             <div class="details">
-                <span class="Lecturer">
-
+                <span class="lecturer">
                     @course.Lecturer.Name
                     @if (Model.ShowAction)
                     {
                         <button class="btn btn-default btn-sm js-toggle-follow" data-user-id="@course.LectureID">Follow</button>
                     }
                 </span>
-
                 <span class="category">
-                        @course.Category.Name
+                    @course.Category.Name
                 </span>
-                    @if (Model.ShowAction)
-                    {
-                        <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>
-                    }
-</div>
+                @if (Model.ShowAction)
+                {
+                    <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>
+                }
+            </div>
         </li>
     }
 
