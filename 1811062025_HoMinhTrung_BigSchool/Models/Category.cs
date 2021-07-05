@@ -8,7 +8,7 @@ namespace _1811062025_HoMinhTrung_BigSchool.Models
 {
     public class Category
     {
-        public byte ID { get; set; }
+        public byte Id { get; set; }
         [Required]
         [StringLength(255)]
         public string Name { get; set; }

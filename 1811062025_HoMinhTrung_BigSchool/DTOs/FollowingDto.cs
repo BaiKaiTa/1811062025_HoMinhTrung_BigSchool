@@ -7,6 +7,6 @@ namespace _1811062025_HoMinhTrung_BigSchool.DTOs
 {
     public class FollowingDto
     {
-        public string FolloweeID { get; set; }
+        public string FolloweeId { get; set; }
     }
 }

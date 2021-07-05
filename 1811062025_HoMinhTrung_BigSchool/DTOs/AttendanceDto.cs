@@ -7,6 +7,6 @@ namespace _1811062025_HoMinhTrung_BigSchool.DTOs
 {
     public class AttendanceDto
     {
-        public int CourseID { get; set; }
+        public int CourseId { get; set; }
     }
 }

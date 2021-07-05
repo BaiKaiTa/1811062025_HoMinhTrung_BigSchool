@@ -1,7 +1,6 @@
 ﻿@model _1811062025_HoMinhTrung_BigSchool.ViewModels.CoursesViewModel
 @using Microsoft.AspNet.Identity;
 @using _1811062025_HoMinhTrung_BigSchool.Models;
-
 @{
     ViewBag.Title = "Attending";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -33,7 +32,7 @@
                 {
                     var User_ID = User.Identity.GetUserId();
                     ApplicationDbContext _dbContext = new ApplicationDbContext();
-                    bool isGoing = _dbContext.Attendances.Any(a => a.CourseID == course.Id && a.AttendeeId == User_ID);
+                    bool isGoing = _dbContext.Attendances.Any(a => a.CourseId == course.Id && a.AttendeeId == User_ID);
 
                     if (isGoing)
                     {

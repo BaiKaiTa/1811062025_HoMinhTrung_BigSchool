@@ -1,4 +1,4 @@
-﻿namespace _1811062025_HoMinhTrung_BigSchool.Migrations
+namespace _1811062025_HoMinhTrung_BigSchool.Migrations
 {
     using System;
     using System.Data.Entity;
@@ -10,13 +10,14 @@
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            ContextKey = "_1811062025_HoMinhTrung_BigSchool.Models.ApplicationDbContext";
         }
 
         protected override void Seed(_1811062025_HoMinhTrung_BigSchool.Models.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
         }
     }

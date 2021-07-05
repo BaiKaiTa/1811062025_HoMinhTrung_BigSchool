@@ -5,18 +5,16 @@
 @{
     ViewBag.Title = "Home Page";
 }
-@*<div class="row">
-        <ul>
-            @foreach (var course in Model.UpcomingCourses)
-            {
-                <li>
-                    @course.DateTime-@course.Lecturer.Name
-                </li>
-            }
-        </ul>
-    </div>
-*@ 
-
+<div class="row">
+    <ul>
+        @foreach (var course in Model.UpcomingCourses)
+        {
+            <li>
+                @course.DateTime-@course.Lecturer.Name
+            </li>
+        }
+    </ul>
+</div>
 <ul class="course">
     @foreach (var course in Model.UpcomingCourses)
     {
@@ -36,16 +34,16 @@
                     {
                         var User_ID = User.Identity.GetUserId();
                         ApplicationDbContext _dbContext = new ApplicationDbContext();
-                        bool isFollowing = _dbContext.Followings.Any(f => f.FolloweeId == course.LectureID && f.FollowerId == User_ID);
+                        bool isFollowing = _dbContext.Followings.Any(f => f.FolloweeId == course.LecturerId && f.FollowerId == User_ID);
                         if (isFollowing)
                         {
-                            <button class="btn btn-info btn-sm js-toggle-follow" data-user-id="@course.LectureID">
+                            <button class="btn btn-info btn-sm js-toggle-follow" data-user-id="@course.LecturerId">
                                 Following
                             </button>
                         }
                         else
                         {
-                            <button class="btn btn-default btn-sm js-toggle-follow" data-user-id="@course.LectureID">
+                            <button class="btn btn-default btn-sm js-toggle-follow" data-user-id="@course.LecturerId">
                                 Follow
                             </button>
                         }
@@ -58,7 +56,7 @@
                     {
                         var User_ID = User.Identity.GetUserId();
                         ApplicationDbContext _dbContext = new ApplicationDbContext();
-                        bool isGoing = _dbContext.Attendances.Any(a => a.CourseID == course.Id && a.AttendeeId == User_ID);
+                        bool isGoing = _dbContext.Attendances.Any(a => a.CourseId == course.Id && a.AttendeeId == User_ID);
 
                         if (isGoing)
                         {
