@@ -8,7 +8,7 @@ namespace _1811062025_HoMinhTrung_BigSchool.ViewModels
 {
     public class CoursesViewModel
     {
-        public IEnumerable<Course> UpcommingCourses { get; set; }
+        public IEnumerable<Course> UpcomingCourses { get; set; }
         public bool ShowAction { get; set; }
     }
 }

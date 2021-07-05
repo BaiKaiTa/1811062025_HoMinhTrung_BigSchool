@@ -7,13 +7,13 @@ namespace _1811062025_HoMinhTrung_BigSchool.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class AddIsCanceledColumnToCourse : IMigrationMetadata
+    public sealed partial class AddNameColumnToApplicationUser : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddIsCanceledColumnToCourse));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddNameColumnToApplicationUser));
         
         string IMigrationMetadata.Id
         {
-            get { return "202106291038244_AddIsCanceledColumnToCourse"; }
+            get { return "202107050625135_AddNameColumnToApplicationUser"; }
         }
         
         string IMigrationMetadata.Source

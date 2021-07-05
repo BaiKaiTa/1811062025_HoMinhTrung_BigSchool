@@ -24,7 +24,7 @@ namespace _1811062025_HoMinhTrung_BigSchool.Controllers
                 .Where(c => c.DateTime > DateTime.Now);
             var viewModel = new CoursesViewModel
             {
-                UpcommingCourses = upcommingCourses,
+                UpcomingCourses = upcommingCourses,
                 ShowAction = User.Identity.IsAuthenticated
             };
             return View(viewModel);

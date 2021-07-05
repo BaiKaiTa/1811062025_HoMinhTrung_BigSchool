@@ -65,7 +65,7 @@ namespace _1811062025_HoMinhTrung_BigSchool.Controllers
                 .ToList();
             var viewModel = new CoursesViewModel
             {
-                UpcommingCourses = courses,
+                UpcomingCourses = courses,
                 ShowAction = User.Identity.IsAuthenticated
             };
             return View(viewModel);

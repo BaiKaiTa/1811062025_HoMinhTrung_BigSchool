@@ -1,4 +1,4 @@
-namespace _1811062025_HoMinhTrung_BigSchool.Migrations
+﻿namespace _1811062025_HoMinhTrung_BigSchool.Migrations
 {
     using System;
     using System.Data.Entity;
@@ -16,7 +16,7 @@ namespace _1811062025_HoMinhTrung_BigSchool.Migrations
         {
             //  This method will be called after migrating to the latest version.
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
         }
     }
