@@ -55,7 +55,7 @@ namespace _1811062025_HoMinhTrung_BigSchool.Controllers
         {
             var userId = User.Identity.GetUserId();
             var courses = _dbContext.Attendances
-                .Where(a => a.AttendeeId == userId)
+                .Where(a => a.AttendeeId == userId && a.Course.IsCanceled == false)
                 .Select(a => a.Course)
                 .Include(l => l.Lecturer)
                 .Include(l => l.Category)
