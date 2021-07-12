@@ -7,13 +7,13 @@ namespace _1811062025_HoMinhTrung_BigSchool.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class InitialModel : IMigrationMetadata
+    public sealed partial class asd123 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialModel));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(asd123));
         
         string IMigrationMetadata.Id
         {
-            get { return "202107051002589_InitialModel"; }
+            get { return "202107120927487_asd123"; }
         }
         
         string IMigrationMetadata.Source

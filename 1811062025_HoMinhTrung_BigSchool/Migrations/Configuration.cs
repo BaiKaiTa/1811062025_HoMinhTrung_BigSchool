@@ -10,7 +10,6 @@ namespace _1811062025_HoMinhTrung_BigSchool.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "_1811062025_HoMinhTrung_BigSchool.Models.ApplicationDbContext";
         }
 
         protected override void Seed(_1811062025_HoMinhTrung_BigSchool.Models.ApplicationDbContext context)

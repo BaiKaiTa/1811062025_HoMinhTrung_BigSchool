@@ -3,7 +3,7 @@ namespace _1811062025_HoMinhTrung_BigSchool.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class PopulateCategoryTable : DbMigration
+    public partial class asd123 : DbMigration
     {
         public override void Up()
         {
